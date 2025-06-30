@@ -1,9 +1,0 @@
-// "Auth" is a subfolder inside "backend":
-// /home/junior/Desktop/GROVE Community/backend/
-//   Auth/
-//     login/
-//     register/
-//     reset-password/
-//     .keep
-
-// This structure places Auth below (inside) backend, not beside it.
