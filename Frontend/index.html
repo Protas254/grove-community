@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Scouts | Tree Planting & Environmental Education</title>
-     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <nav>
@@ -281,6 +283,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
     <script>
         // Mobile menu toggle functionality
         document.querySelector('.menu-toggle').addEventListener('click', function() {
@@ -293,75 +296,73 @@
                 document.querySelector('.nav-links').classList.remove('active');
             });
         });
+        
+        // Staggered fade-in for badge images
+        window.addEventListener('DOMContentLoaded', function() {
+            const badges = document.querySelectorAll('.badge img');
+            badges.forEach((img, i) => {
+                setTimeout(() => {
+                    img.classList.add('badge-fade-in');
+                }, 250 * i);
+            });
+        });
     </script>
-    <script src="script.js"></script>
     <script>
-// Staggered fade-in for badge images
-window.addEventListener('DOMContentLoaded', function() {
-    const badges = document.querySelectorAll('.badge img');
-    badges.forEach((img, i) => {
-        setTimeout(() => {
-            img.classList.add('badge-fade-in');
-        }, 250 * i);
-    });
-});
-</script>
-<script>
-    // See more/less for Protas Junior
-    document.addEventListener('DOMContentLoaded', function() {
-        var toggle = document.getElementById('protas-toggle');
-        var shortText = document.getElementById('protas-short');
-        var moreText = document.getElementById('protas-more');
-        var expanded = false;
-        if (toggle) {
-            toggle.addEventListener('click', function() {
-                expanded = !expanded;
-                if (expanded) {
-                    moreText.style.display = '';
-                    toggle.textContent = '-';
-                } else {
-                    moreText.style.display = 'none';
-                    toggle.textContent = '+';
-                }
-            });
-        }
+        // See more/less for Protas Junior
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggle = document.getElementById('protas-toggle');
+            var shortText = document.getElementById('protas-short');
+            var moreText = document.getElementById('protas-more');
+            var expanded = false;
+            if (toggle) {
+                toggle.addEventListener('click', function() {
+                    expanded = !expanded;
+                    if (expanded) {
+                        moreText.style.display = '';
+                        toggle.textContent = '-';
+                    } else {
+                        moreText.style.display = 'none';
+                        toggle.textContent = '+';
+                    }
+                });
+            }
 
-        // See more/less for Lydia Onyango
-        var lydiaToggle = document.getElementById('lydia-toggle');
-        var lydiaShort = document.getElementById('lydia-short');
-        var lydiaMore = document.getElementById('lydia-more');
-        var lydiaExpanded = false;
-        if (lydiaToggle) {
-            lydiaToggle.addEventListener('click', function() {
-                lydiaExpanded = !lydiaExpanded;
-                if (lydiaExpanded) {
-                    lydiaMore.style.display = '';
-                    lydiaToggle.textContent = '-';
-                } else {
-                    lydiaMore.style.display = 'none';
-                    lydiaToggle.textContent = '+';
-                }
-            });
-        }
+            // See more/less for Lydia Onyango
+            var lydiaToggle = document.getElementById('lydia-toggle');
+            var lydiaShort = document.getElementById('lydia-short');
+            var lydiaMore = document.getElementById('lydia-more');
+            var lydiaExpanded = false;
+            if (lydiaToggle) {
+                lydiaToggle.addEventListener('click', function() {
+                    lydiaExpanded = !lydiaExpanded;
+                    if (lydiaExpanded) {
+                        lydiaMore.style.display = '';
+                        lydiaToggle.textContent = '-';
+                    } else {
+                        lydiaMore.style.display = 'none';
+                        lydiaToggle.textContent = '+';
+                    }
+                });
+            }
 
-        // See more/less for Samuel Kiptoo
-        var samuelToggle = document.getElementById('samuel-toggle');
-        var samuelShort = document.getElementById('samuel-short');
-        var samuelMore = document.getElementById('samuel-more');
-        var samuelExpanded = false;
-        if (samuelToggle) {
-            samuelToggle.addEventListener('click', function() {
-                samuelExpanded = !samuelExpanded;
-                if (samuelExpanded) {
-                    samuelMore.style.display = '';
-                    samuelToggle.textContent = '-';
-                } else {
-                    samuelMore.style.display = 'none';
-                    samuelToggle.textContent = '+';
-                }
-            });
-        }
-    });
-</script>
+            // See more/less for Samuel Kiptoo
+            var samuelToggle = document.getElementById('samuel-toggle');
+            var samuelShort = document.getElementById('samuel-short');
+            var samuelMore = document.getElementById('samuel-more');
+            var samuelExpanded = false;
+            if (samuelToggle) {
+                samuelToggle.addEventListener('click', function() {
+                    samuelExpanded = !samuelExpanded;
+                    if (samuelExpanded) {
+                        samuelMore.style.display = '';
+                        samuelToggle.textContent = '-';
+                    } else {
+                        samuelMore.style.display = 'none';
+                        samuelToggle.textContent = '+';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
